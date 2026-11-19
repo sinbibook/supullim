@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.5.0",
-    "generatedAt": "2026-11-19T05:25:16.517024402Z",
+    "version": "1.6.0",
+    "generatedAt": "2026-11-19T05:25:59.661678033Z",
     "templateType": "trip_f",
     "propertyId": "01a1a5ae-dde6-7844-ae25-2d04d46bd39e",
     "homepageId": "01a1f1c9-57ce-784b-abb2-1cdc7226ffea"
@@ -1093,7 +1093,7 @@
                     "blockId": null
                   }
                 ],
-                "description": "해가 기울면 집의 윤곽이 조금씩 부드러워집니다.\n산책을 마치고 돌아오는 길, 창에 켜진 불빛이 눈에 들어옵니다."
+                "description": "감성 가득한 하루를 보낼 수 있는 단 하루\n소중한 여행 그리고 휴식\n보은 수풀림 독채 스파 펜션에서 특별한 순간을 느껴보세요."
               },
               "about": [
                 {
@@ -1109,7 +1109,7 @@
                     }
                   ],
                   "blockId": "94897f36-77c0-4b02-995e-21a180a6b44f",
-                  "description": ""
+                  "description": "감성 가득한 보은 수풀림 독채 스파 펜션으로 떠나는 어느 날,\n당신의 아름다운 여행을 응원합니다."
                 }
               ]
             }
