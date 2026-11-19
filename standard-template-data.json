@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.0.0",
-    "generatedAt": "2026-11-19T03:55:06.187850717Z",
+    "version": "1.1.0",
+    "generatedAt": "2026-11-19T04:00:05.599836984Z",
     "templateType": "trip_f",
     "propertyId": "01a1a5ae-dde6-7844-ae25-2d04d46bd39e",
     "homepageId": "01a1f1c9-57ce-784b-abb2-1cdc7226ffea"
@@ -895,17 +895,26 @@
               },
               "closing": {
                 "title": "",
-                "images": [ ],
+                "images": [
+                  {
+                    "id": "01a1f1f6-2899-7147-b2c7-7e6d0c751e45",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a1f1c9-57ce-784b-abb2-1cdc7226ffea/index_closing/1795060803285-yd5lyfv9uy.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": true,
+                    "blockId": null
+                  }
+                ],
                 "videos": [ ],
                 "mediaType": "image",
                 "description": ""
               },
               "essence": {
-                "title": "",
+                "title": "Boeun Supullim Private Pension",
                 "images": [
                   {
-                    "id": "01a1f1ca-ce3b-7513-b206-4651b7c39f63",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a1f1c9-57ce-784b-abb2-1cdc7226ffea/index_essence/1795057961928-fgpgsbnxb5.jpg",
+                    "id": "01a1f1f6-28ae-7add-add9-547c30a0563f",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a1f1c9-57ce-784b-abb2-1cdc7226ffea/index_essence/1795060803254-4ygmtttg9r.jpg",
                     "sortOrder": 0,
                     "description": "",
                     "isSelected": true,
@@ -918,7 +927,32 @@
               },
               "gallery": {
                 "title": "",
-                "images": [ ],
+                "images": [
+                  {
+                    "id": "01a1f1f6-2931-772f-afc8-61e8a173095a",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a1f1c9-57ce-784b-abb2-1cdc7226ffea/index_gallery/1795060803283-kvk03yzgif.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": true,
+                    "blockId": null
+                  },
+                  {
+                    "id": "01a1f1f6-287e-7021-bff9-976763a90484",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a1f1c9-57ce-784b-abb2-1cdc7226ffea/index_gallery/1795060803294-0ncso9wqbf.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": true,
+                    "blockId": null
+                  },
+                  {
+                    "id": "01a1f1f6-28a6-7155-bf9c-794d7c3c45fe",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a1f1c9-57ce-784b-abb2-1cdc7226ffea/index_gallery/1795060803309-xnbjec345c.jpg",
+                    "sortOrder": 2,
+                    "description": "",
+                    "isSelected": true,
+                    "blockId": null
+                  }
+                ],
                 "videos": [ ],
                 "mediaType": "image",
                 "description": ""
