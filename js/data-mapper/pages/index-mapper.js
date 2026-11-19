@@ -28,6 +28,60 @@
   function setHtml(sel, val) {
     document.querySelectorAll(sel).forEach(function (el) { el.innerHTML = nl2br(val); });
   }
+  // 최하단 숙소 영문명(main_stay h3)을 1줄로 맞춘다.
+  // 영문명은 숙소마다 16~40자라 글자 크기 하나로는 1줄을 보장할 수 없다(375px 에서 16자 53px · 40자 22px 까지).
+  // 단, 480px 이하는 30px 고정(2줄 허용)이라 맞추지 않는다.
+  // CSS 브레이크포인트 크기를 상한으로 두고, 그 크기로 넘칠 때만 1줄에 들어가는 크기로 줄인다.
+  // STAY_NAME_MIN_PX 보다 작아져야 하면 줄이지 않고 그 크기에서 원래처럼 2줄로 둔다(잘리지 않게).
+  var STAY_NAME_MIN_PX = 20;
+  // 480px 이하는 30px 고정이고 길면 2줄로 둔다(운영 요청 2026-11-19) — style.css 의 같은 브레이크포인트와 맞춘다
+  var STAY_NAME_FIXED_MQ = '(max-width: 480px)';
+  function fitStayNameEn() {
+    var fixed = window.matchMedia && window.matchMedia(STAY_NAME_FIXED_MQ).matches;
+    document.querySelectorAll('[data-index-stay-name-en]').forEach(function (el) {
+      el.style.fontSize = '';
+      el.style.whiteSpace = '';
+      if (fixed || !el.textContent.trim() || !el.clientWidth) return;
+
+      var cs = getComputedStyle(el);
+      var avail = el.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+      var range = document.createRange();
+      range.selectNodeContents(el);
+      var measure = function () {
+        return range.getBoundingClientRect().width;
+      };
+
+      el.style.whiteSpace = 'nowrap';
+      var max = parseFloat(cs.fontSize);
+      var need = measure();
+      if (need <= avail) return; // CSS 크기 그대로 1줄
+
+      var size = Math.floor((max * avail) / need);
+      while (size > STAY_NAME_MIN_PX) {
+        el.style.fontSize = size + 'px';
+        if (measure() <= avail) break;
+        size -= 1;
+      }
+      if (size <= STAY_NAME_MIN_PX) {
+        el.style.fontSize = STAY_NAME_MIN_PX + 'px';
+        if (measure() > avail) el.style.whiteSpace = ''; // 최소 크기로도 안 들어가면 2줄
+      }
+    });
+    if (window.locoScroll && typeof window.locoScroll.update === 'function') window.locoScroll.update();
+  }
+  // 화면 폭이 바뀌거나(브레이크포인트 크기 변경) 웹폰트가 늦게 들어오면 폭이 달라지므로 다시 맞춘다
+  (function bindStayNameRefit() {
+    var timer = null;
+    window.addEventListener('resize', function () {
+      clearTimeout(timer);
+      timer = setTimeout(fitStayNameEn, 150);
+    });
+    if (document.fonts) {
+      if (document.fonts.ready) document.fonts.ready.then(fitStayNameEn);
+      if (document.fonts.addEventListener) document.fonts.addEventListener('loadingdone', fitStayNameEn);
+    }
+  })();
+
   function setBg(el, url) {
     if (!el) return;
     if (url) el.style.backgroundImage = 'url(' + url + ')';
@@ -251,6 +305,7 @@
     setHtml('[data-index-stay-description]', gallery.description);
     setText('[data-index-stay-name]', this.getPropertyName());
     setText('[data-index-stay-name-en]', this.getPropertyNameEn());
+    fitStayNameEn();
 
     // 3칸 레이아웃(stay-img01/02/03) 유지하며 배경만 교체
     var container = document.querySelector('[data-index-stay-images]');
