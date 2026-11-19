@@ -436,6 +436,8 @@ visual
 .main_about .cont .fl .stxt span{font-size:14px; color:rgb(from var(--color-secondary) r g b / 0.65); position:absolute ;left:0; top:0; letter-spacing:0;opacity:0;-webkit-transition: opacity 0.5s ease-in-out, transform 0.65s ease-in-out;-moz-transition: opacity 0.5s ease-in-out, transform 0.65s ease-in-out;-o-transition: opacity 0.5s ease-in-out, transform 0.65s ease-in-out;transition: opacity 0.5s ease-in-out, transform 0.65s ease-in-out;  -webkit-transform: translateX(30px); -moz-transform: translateX(30px);-ms-transform: translateX(30px); -o-transform:  translateX(30px);transform: translateX(30px);}
 .main_about .cont .fl .stxt:after{position:absolute ;left:0; bottom:-1px; border-bottom:1px solid rgb(from var(--color-secondary) r g b / 0.65); display:block; content:""; width:700px;}
 .main_about .cont .fl .stxt br{display:none}
+/* 소개문구는 단어 중간에서 끊지 않는다(모바일 「환영합니/다」). 띄어쓰기 없는 긴 문자열만 넘칠 때 끊는다 */
+.main_about .cont .fl .stxt p{word-break:keep-all; overflow-wrap:anywhere;}
 .main_about .cont .fl .stxt p{line-height:1.7em; color:var(--color-secondary); font-size:14px; opacity:0;-webkit-transition: opacity 0.5s ease-in-out, transform 0.65s ease-in-out;-moz-transition: opacity 0.5s ease-in-out, transform 0.65s ease-in-out;-o-transition: opacity 0.5s ease-in-out, transform 0.65s ease-in-out;transition: opacity 0.5s ease-in-out, transform 0.65s ease-in-out;  -webkit-transform: translateX(30px); -moz-transform: translateX(30px);-ms-transform: translateX(30px); -o-transform:  translateX(30px);transform: translateX(30px);}
 
 .main_about .cont .fl .stxt.is-inview span{transition-delay: 0.4s; opacity:1;-webkit-transform: translateX(0); -moz-transform: translateX(0);-ms-transform: translateX(0); -o-transform:  translateX(0);transform: translateX(0);}
@@ -732,6 +734,9 @@ visual
 .main_stay {padding:200px 0 160px 0}
 .main_stay .tits{text-align:center;}
 .main_stay .tits h3{font-size:80px; color:var(--color-secondary);font-family: var(--font-en-main); letter-spacing:0; line-height:1.3em;}
+/* 숙소 영문명(16~40자) 1줄 맞춤 — 글자 크기는 아래 브레이크포인트 값이 상한이고, 넘치면 index-mapper.fitStayNameEn 이 줄인다.
+   좌우 여백은 글자가 화면 끝에 붙지 않게 둔다. */
+.main_stay .tits h3{padding:0 20px; box-sizing:border-box;}
 .main_stay .tits p{margin-top:15px;font-size:16px; font-weight:500; color:var(--color-secondary); line-height:1.2em;font-family: var(--font-ko-main);}
 
 .main_stay .cont{ max-width:1250px; padding:0 20px; margin:0 auto; margin-top:105px;box-sizing:border-box;}
@@ -877,7 +882,8 @@ visual
     .main_stay .cont .fr li:nth-child(3) div:before{width:48px;height:24px; top:-10px; }
 }
 @media only screen and (max-width:480px) {
-    .main_stay .tits h3{font-size:40px;}
+    /* 모바일은 30px 고정(요청). 영문명이 길면 2줄 — 이 폭에서는 자동 줄임(fitStayNameEn)을 하지 않는다 */
+    .main_stay .tits h3{font-size:30px;}
     .main_stay .cont .fr{margin-top:0;}
     .main_stay .cont .fr ul{width:360px; height:250px; margin:0 auto;}
     .main_stay .cont .fr li div{width:240px; height:150px; padding:15px 10px 10px 10px}
@@ -1250,7 +1256,7 @@ visual
 }
 
 .special-wrap .vimg{max-width:1096px;box-sizing:border-box; margin:0 auto;margin-top:130px; position:relative; z-index:2; padding:120px 20px; border-top:1px solid rgb(from var(--color-secondary) r g b / 0.65); animation-delay:0.3s;}
-.special-wrap .vimg:before{width:30px;height:40px; left:50%;margin-left:-15px; top:-20px; background:rgb(from var(--color-primary) r g b / 0.3); display:block; content:"";position:Absolute;}
+/* .special-wrap .vimg 위 30×40 색 네모(:before)는 배경색과 어긋나 보여 없앴다 (2026-11-19 요청). 세로선(:after)은 둔다 */
 .special-wrap .vimg:after{width:0;height:40px; left:50%;margin-left:-1px; top:-20px; border-left:1px solid rgb(from var(--color-secondary) r g b / 0.65); display:block; content:"";position:Absolute;}
 
 .special-wrap .vimg .cont:after{display:block; content:"";clear:both;}
@@ -1664,7 +1670,7 @@ visual
 }
 
 .about-wrap .vimg{max-width:1096px; box-sizing:border-box; margin:0 auto;padding:120px 20px;margin-top:100px;position:relative; border-top:1px solid rgb(from var(--color-secondary) r g b / 0.65);}
-.about-wrap .vimg:before{width:30px;height:40px; left:50%;margin-left:-15px; top:-20px; background:rgb(from var(--color-primary) r g b / 0.3); display:block; content:"";position:Absolute;}
+/* .about-wrap .vimg 위 30×40 색 네모(:before)는 배경색과 어긋나 보여 없앴다 (2026-11-19 요청). 세로선(:after)은 둔다 */
 .about-wrap .vimg:after{width:0;height:40px; left:50%;margin-left:-1px; top:-20px; border-left:1px solid rgb(from var(--color-secondary) r g b / 0.65); display:block; content:"";position:Absolute;}
 
 .about-wrap .vimg h4{font-family: var(--font-en-main);  font-size:40px; color:var(--color-secondary); line-height:1.2em; text-align:center;animation-delay:0.2s;}
@@ -1978,7 +1984,7 @@ v-scrollbar
 .pre-wrap .info{ max-width:1096px; padding:0 20px; margin:0 auto; box-sizing:border-box;}
 
 .pre-wrap .vimg{max-width:1096px; box-sizing:border-box; margin:0 auto;padding:50px 20px 120px;/*margin-top:100px;*/position:relative; border-top:1px solid rgb(from var(--color-secondary) r g b / 0.65);}
-.pre-wrap .vimg:before{width:30px;height:40px; left:50%;margin-left:-15px; top:-20px; background:rgb(from var(--color-primary) r g b / 0.3); display:block; content:"";position:Absolute;}
+/* .pre-wrap .vimg 위 30×40 색 네모(:before)는 배경색과 어긋나 보여 없앴다 (2026-11-19 요청). 세로선(:after)은 둔다 */
 .pre-wrap .vimg:after{width:0;height:40px; left:50%;margin-left:-1px; top:-20px; border-left:1px solid rgb(from var(--color-secondary) r g b / 0.65); display:block; content:"";position:Absolute;}
 
 .pre-wrap .vimg .img {margin-top: 85px;animation-delay: 0.6s;}
