@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.7.0",
-    "generatedAt": "2026-11-19T05:26:30.184043249Z",
+    "version": "1.8.0",
+    "generatedAt": "2026-11-19T05:29:31.357652630Z",
     "templateType": "trip_f",
     "propertyId": "01a1a5ae-dde6-7844-ae25-2d04d46bd39e",
     "homepageId": "01a1f1c9-57ce-784b-abb2-1cdc7226ffea"
@@ -27,7 +27,7 @@
     "province": "도/시",
     "city": "시/군/구",
     "domain": "supullim.kr",
-    "realtimeBookingId": "",
+    "realtimeBookingId": "https://www.bookingplay.co.kr/booking/1/13820",
     "ybsId": "",
     "tripPropertyId": "13820",
     "partnerType": "distributor_b",
@@ -212,6 +212,55 @@
             "id": "01a1f1b5-5b24-76b3-a8ed-147891b54718",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/01a1c4b0-828e-7aef-8ba3-33b2058d7052/main/1795056556411-y7ptpe425d.jpg",
             "sortOrder": 2,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          }
+        ]
+      },
+      {
+        "id": "01a1f1b5-4168-7a3f-a32c-daa72bb00903",
+        "name": "산책로",
+        "description": "천천히 걷다 보면 바람에 흔들리는 잎사귀에도 눈길이 머뭅니다.\n선선한 공기를 마시며 기분 좋게 하루를 시작해보세요.",
+        "usageGuide": "",
+        "displayOrder": 3,
+        "images": [
+          {
+            "id": "01a1f246-c298-795c-b461-ebd9cebf8969",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/01a1f1b5-4168-7a3f-a32c-daa72bb00903/main/1795066085631-njkoqb3cft.jpg",
+            "sortOrder": 0,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "01a1f246-c2a6-7458-89af-0706d4985228",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/01a1f1b5-4168-7a3f-a32c-daa72bb00903/main/1795066085625-6admn4i911.jpg",
+            "sortOrder": 1,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "01a1f246-c575-76f7-8c88-6e007022be22",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/01a1f1b5-4168-7a3f-a32c-daa72bb00903/main/1795066085615-nbj0btfck3.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "01a1f246-c55e-70f2-af22-476acfe24a5a",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/01a1f1b5-4168-7a3f-a32c-daa72bb00903/main/1795066085618-fc9wd06se0.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "01a1f246-c6af-7346-aade-fe9c24955b2d",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/01a1f1b5-4168-7a3f-a32c-daa72bb00903/main/1795066085631-c83elu8wd3.jpg",
+            "sortOrder": 4,
             "description": "",
             "isSelected": true,
             "blockId": null
@@ -974,8 +1023,8 @@
                 "title": "",
                 "images": [
                   {
-                    "id": "01a1f239-f748-74df-9970-b7d02ddb00e6",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a1f1c9-57ce-784b-abb2-1cdc7226ffea/directions_hero/1795065247110-5wrm55ympp.jpg",
+                    "id": "01a1f248-0b0d-73dd-84c2-8f1259e69cde",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a1f1c9-57ce-784b-abb2-1cdc7226ffea/directions_hero/1795066169759-p0e4jkldqr.jpg",
                     "sortOrder": 0,
                     "description": "",
                     "isSelected": true,
